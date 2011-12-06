@@ -22,7 +22,7 @@ Here's how I would typically use this template with [djenesis](http://github.com
     # Replace all instaces of "newproject: with your project name
     cd ~/Projects
     mkdir newproject && cd newproject
-    djenesis code --virtualenv=env --template=normal
+    djenesis code --virtualenv=env --template=http://github.com/downloads/auzigog/django-project-templates/normal.tar.gz
     source ../env/bin/activate
     # Ready to start coding!
 
