@@ -14,15 +14,11 @@ The **normal** template includes:
 ### Typical
 To usually normally, just clone or download the repo and use the directory structure to get you started.
 
-### With Djenesis
-To use with [djenesis](http://github.com/concentricsky/djenesis), you must place each of these folders
+### Example with Djenesis
+Here's how I would typically use this template with [djenesis](http://github.com/concentricsky/djenesis):
 
-When an [issue](https://github.com/concentricsky/djenesis/issues/4) closes with djenesis, it will be easier to directly template reference local folders.
-
-
-### Example
-Here's how I would typically use this template with djenesis:
-
+    # Install djenesis if you haven't already
+    pip install git+ssh://git@github.com/concentricsky/djenesis.git
     # Replace all instaces of "newproject: with your project name
     cd ~/Projects
     mkdir newproject && cd newproject
