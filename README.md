@@ -15,7 +15,7 @@ The **normal** template includes:
 To usually normally, just clone or download the repo and use the directory structure to get you started.
 
 ### Example with Djenesis
-Here's how I would typically use this template with [djenesis](http://github.com/concentricsky/djenesis):
+Here's how I would typically use this template with [Djenesis](http://github.com/concentricsky/djenesis):
 
     # Assumes you downloaded/cloned this git repo to ~/Projects/django-project-templates/code/
     # Replace all instaces of "newproject" with your project name
