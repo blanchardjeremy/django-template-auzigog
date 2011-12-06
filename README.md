@@ -2,6 +2,7 @@ These are project templates that I use for my Django projects.
 
 ## Features
 The **normal** template includes:
+
   * [PostgreSQL](http://www.postgresql.org/) and [psycopg2](http://pypi.python.org/pypi/psycopg2)
   * [django-debug-toolbar](http://github.com/django-debug-toolbar/django-debug-toolbar) and `requirements-development.txt`
   * [Jinja2](http://jinja.pocoo.org/docs/) and [jingo](http://github.com/concentricsky/jingo) support
@@ -35,4 +36,4 @@ This project is licensed under the [Apache License, Version 2.0](http://www.apac
 
 
 ## Credits
-Released
+Created by [Jeremy Blanchard](http://blanchardjeremy.com)
