@@ -10,15 +10,23 @@ The **normal** template includes:
 
 
 ## Usage
-First, get a copy of this repo by cloning it or downloading it. Place the repo in a folder of your choice (for example, `~/Projects/django-project-templates/`)
 
-Here's how I would typically use this template with [djenesis](http://github.com/concentricsky/djenesis):
+### Typical
+To usually normally, just clone or download the repo and use the directory structure to get you started.
 
+### With Djenesis
+To use with [djenesis](http://github.com/concentricsky/djenesis), you must place each of these folders
+
+When an [issue](https://github.com/concentricsky/djenesis/issues/4) closes with djenesis, it will be easier to directly template reference local folders.
+
+
+### Example
+Here's how I would typically use this template with djenesis:
+
+    # Replace all instaces of "newproject: with your project name
     cd ~/Projects
-    mkdir newproject # Replace all isntaces of newproject with your project name
-    cd newproject
-    djenesis code --virtualenv=env --template=~/Projects/django-project-templates/normal
-    cd code
+    mkdir newproject && cd newproject
+    djenesis code --virtualenv=env --template=normal
     source ../env/bin/activate
     # Ready to start coding!
 
