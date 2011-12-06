@@ -18,9 +18,11 @@ To usually normally, just clone or download the repo and use the directory struc
 Here's how I would typically use this template with [djenesis](http://github.com/concentricsky/djenesis):
 
     # Assumes you downloaded/cloned this git repo to ~/Projects/django-project-templates/code/
+    # Replace all instaces of "newproject" with your project name
+
     # Install djenesis if you haven't already
     pip install git+ssh://git@github.com/concentricsky/djenesis.git
-    # Replace all instaces of "newproject" with your project name
+
     cd ~/Projects
     mkdir newproject && cd newproject
     djenesis code --virtualenv=env --template=~/Projects/django-project-templates/code/normal
