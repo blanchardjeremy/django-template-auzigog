@@ -3,4 +3,4 @@ Jinja2==2.6
 distribute==0.6.15
 psycopg2==2.4.1
 South==0.7.3
-git+ssh://git@github.com/concentricsky/jingo.git#egg=jingo
+jingo==0.4
