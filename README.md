@@ -27,7 +27,7 @@ Here's how I would typically use this template with [Djenesis](http://github.com
     mkdir newproject && cd newproject
     djenesis code --virtualenv=env --template=~/Projects/django-project-templates/code/normal
     source ../env/bin/activate
-    # Ready to start coding!
+    # You're ready to start coding!
 
     # Optionally start a git repo inside the `code` directory
     git init
@@ -37,6 +37,16 @@ Here's how I would typically use this template with [Djenesis](http://github.com
 To make full use of the `normal` template, make sure to install the other requirements file:
 
     pip install requirements-development.txt
+
+After installation:
+
+  * Search all instances of SAMPLEAPP and replace them with your first app name
+  * Rename `settings_local.py.example` to `settings_local.py` and add in your database information
+
+The run:
+
+    cd ~/Projects/newproject/code
+    manage.py syncdb
 
 ## License
 This project is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)

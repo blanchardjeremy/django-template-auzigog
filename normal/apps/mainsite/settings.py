@@ -23,6 +23,8 @@ INSTALLED_APPS = [
 
 ]
 
+JINGO_EXCLUDE_APPS = ['admin']
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
