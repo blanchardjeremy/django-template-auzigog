@@ -36,3 +36,6 @@ INTERNAL_IPS = (
    '127.0.0.1',
 )
 JINGO_EXCLUDE_APPS.append('debug_toolbar')
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False
+}
