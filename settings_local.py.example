@@ -29,7 +29,7 @@ CACHES = {
 }
 
 
-# Example of how to include debug toolbar in local_settings
+# Example of how to include debug toolbar in settings_local
 MIDDLEWARE_CLASSES.insert(0,'debug_toolbar.middleware.DebugToolbarMiddleware')
 INSTALLED_APPS.append('debug_toolbar')
 INTERNAL_IPS = (
