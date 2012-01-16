@@ -1,42 +1,40 @@
-These are project templates that I use for my Django projects.
+This is the template that I use for my Django projects.
 
 ## Features
-The **normal** template includes:
 
   * [PostgreSQL](http://www.postgresql.org/) and [psycopg2](http://pypi.python.org/pypi/psycopg2)
-  * [django-debug-toolbar](http://github.com/django-debug-toolbar/django-debug-toolbar) and `requirements-development.txt`
+  * [django-debug-toolbar](http://github.com/django-debug-toolbar/django-debug-toolbar) and `requirements-debug.txt`
   * [Jinja2](http://jinja.pocoo.org/docs/) and [jingo](http://github.com/concentricsky/jingo) support
   * `settings_local.py.example` provided to separate machine-specific settings from universal settings
 
 
 ## Usage
-
 ### Typical
 To usually normally, just clone or download the repo and use the directory structure to get you started.
 
 ### Example with Djenesis
 Here's how I would typically use this template with [Djenesis](http://github.com/concentricsky/djenesis):
 
-    # Assumes you downloaded/cloned this git repo to ~/Projects/django-project-templates/code/
-    # Replace all instaces of "newproject" with your project name
+    # Replace all instaces of PROJECTNAME with your project name
 
     # Install djenesis if you haven't already
-    pip install git+ssh://git@github.com/concentricsky/djenesis.git
+    pip install djenesis
 
     cd ~/Projects
-    mkdir newproject && cd newproject
-    djenesis code --virtualenv=env --template=~/Projects/django-project-templates/code/normal
+    djenesis PROJECTNAME/code --virtualenv=PROJECTENV/env git+https://github.com/auzigog/django-template-auzigog.git
+    cd PROJECTNAME/code
     source ../env/bin/activate
+    ./manage.py syncdb
     # You're ready to start coding!
 
     # Optionally start a git repo inside the `code` directory
     git init
-    git add *
-    git commit -m 'Big bang! Initial commit of newproject'
+    git add -A
+    git commit -m 'Big bang! Initial commit of PROJECTNAME'
 
-To make full use of the `normal` template, make sure to install the other requirements file:
+The `requirements-debug.txt` file can be used to specify packages you use on your local development environment.
 
-    pip install requirements-development.txt
+    pip install requirements-debug.txt
 
 After installation:
 
@@ -45,8 +43,8 @@ After installation:
 
 The run:
 
-    cd ~/Projects/newproject/code
-    manage.py syncdb
+    cd ~/Projects/PROJECTNAME/code
+    ./manage.py syncdb
 
 ## License
 This project is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)

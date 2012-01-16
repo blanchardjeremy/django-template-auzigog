@@ -32,6 +32,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = [
@@ -51,6 +52,9 @@ TEMPLATE_LOADERS = [
     'django.template.loaders.app_directories.Loader',
 ]
 
+TEMPLATE_DIRS = [
+    os.path.join(TOP_DIR, 'templates'),
+]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -63,26 +67,19 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(TOP_DIR, 'static')
 MEDIA_ROOT = os.path.join(TOP_DIR, 'uploads')
-MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+MEDIA_URL = '/uploads/'
 ADMIN_MEDIA_PREFIX = STATIC_URL+'admin/'
-
-
-
 
 
 ROOT_URLCONF = 'mainsite.urls'
 
-TEMPLATE_DIRS = (
-    os.path.join(TOP_DIR, 'templates'),
-)
 
 SITE_ID = 1
 
 USE_I18N = True
 USE_L10N = True
-
-
+USE_TZ = True
 
 LOGGING = {
     'version': 1,
@@ -101,8 +98,6 @@ LOGGING = {
         },
     }
 }
-
-
 
 
 # try to import settings_local if present
