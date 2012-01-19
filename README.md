@@ -1,24 +1,23 @@
-This is the template that I use for my Django projects.
+This is the template that [auzigog](http://github.com/auzigog/) uses for Django project.
 
 ## Features
+Pre-configured to work with:
 
-  * [PostgreSQL](http://www.postgresql.org/) and [psycopg2](http://pypi.python.org/pypi/psycopg2)
-  * [django-debug-toolbar](http://github.com/django-debug-toolbar/django-debug-toolbar) and `requirements-debug.txt`
-  * [Jinja2](http://jinja.pocoo.org/docs/) and [jingo](http://github.com/concentricsky/jingo) support
+  * [PostgreSQL](http://www.postgresql.org/)
+  * [Jinja2](http://jinja.pocoo.org/docs/) templates
+  * [django-debug-toolbar](http://github.com/django-debug-toolbar/django-debug-toolbar)
   * `settings_local.py.example` provided to separate machine-specific settings from universal settings
 
 
-## Usage
-### Typical
-To usually normally, just clone or download the repo and use the directory structure to get you started.
+## Setup
+### Typical Setup
+To use normally, just clone or download the repo and use the directory structure to get you started.
 
-### Example with Djenesis
+### Djenesis Setup
 Here's how I would typically use this template with [Djenesis](http://github.com/concentricsky/djenesis):
 
     # Replace all instaces of PROJECTNAME with your project name
-
-    # Install djenesis if you haven't already
-    pip install djenesis
+    pip install djenesis   # Install djenesis if you haven't already
 
     cd ~/Projects
     djenesis PROJECTNAME/code --virtualenv=PROJECTENV/env git+https://github.com/auzigog/django-template-auzigog.git
@@ -27,28 +26,25 @@ Here's how I would typically use this template with [Djenesis](http://github.com
     ./manage.py syncdb
     # You're ready to start coding!
 
-    # Optionally start a git repo inside the `code` directory
-    git init
-    git add -A
-    git commit -m 'Big bang! Initial commit of PROJECTNAME'
+Run `pip install requirements-debug.txt` to load packages that are just for local development.
 
-The `requirements-debug.txt` file can be used to specify packages you use on your local development environment.
 
-    pip install requirements-debug.txt
+## New Project Checklist
+After starting a fresh project:
 
-After installation:
+  1) Rename `settings_local.py.example` to `settings_local.py` and add in your database information
+  1) Delete this `README.md` file, rename `README.md.example` to `README.md`, replace with information for your current project
+  1) Create your first app using SAMPLEAPP as a template. These steps use
+    1) Copy (don't rename) SAMPLE to a new directory for your new app. Example: `cp -R SAMPLEAPP blog`
+    1) Specify new app name in `mainsite.urls`. Example: change `(r'', include('SAMPLEAPP.urls')),` to `(r'', include('blog.urls')),`
+    1) Add urls, views, and templates to your new app as necessary
 
-  * Search all instances of SAMPLEAPP and replace them with your first app name
-  * Rename `settings_local.py.example` to `settings_local.py` and add in your database information
-
-The run:
-
-    cd ~/Projects/PROJECTNAME/code
-    ./manage.py syncdb
 
 ## License
 This project is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 
 ## Credits
-Created by [Jeremy Blanchard](http://blanchardjeremy.com)
+Created with love by [Jeremy Blanchard](http://blanchardjeremy.com)
+
+This project originated from [csky-django-template](https://github.com/concentricsky/csky-django-template)
