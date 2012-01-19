@@ -81,6 +81,11 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+SECRET_KEY = ''
+TIME_ZONE = 'America/Los_Angeles'
+LANGUAGE_CODE = 'en-us'
+
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
