@@ -34,7 +34,7 @@ After starting a fresh project:
 
   1. Rename `settings_local.py.example` to `settings_local.py` and add in your database information
   1. Delete this `README.md` file, rename `README.md.example` to `README.md`, replace with information for your current project
-  1. Create your first app using SAMPLEAPP as a template. These steps use
+  1. Create your first app using SAMPLEAPP as a template.
     1. Copy (don't rename) SAMPLE to a new directory for your new app. Example: `cp -R SAMPLEAPP blog`
     1. Specify new app name in `mainsite.urls`. Example: change `(r'', include('SAMPLEAPP.urls')),` to `(r'', include('blog.urls')),`
     1. Add urls, views, and templates to your new app as necessary
